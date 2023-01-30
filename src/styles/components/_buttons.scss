@@ -1,0 +1,21 @@
+.btn {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+
+  &--nav {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-top: 4px solid rgba($teal, 0);
+    height: 100%;
+    transition: border $fade;
+
+    &:hover {
+      border-top: 4px solid rgba($teal, 1);
+    }
+  }
+
+  & h4 {
+    color: $white;
+  }
+}

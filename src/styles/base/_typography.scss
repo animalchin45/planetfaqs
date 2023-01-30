@@ -1,0 +1,97 @@
+// Typography
+
+$font-size-default: 1.4rem;
+$font-size-xsmall: 1.1rem;
+$font-size-small: 1.2rem;
+$font-size-medium: 4rem;
+$font-size-large: 8rem;
+
+@font-face {
+  font-family: 'League Spartan';
+  src: url('../fonts/LeagueSpartan-Bold.eot');
+  src: url('../fonts/LeagueSpartan-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/LeagueSpartan-Bold.woff2') format('woff2'),
+    url('../fonts/LeagueSpartan-Bold.woff') format('woff'),
+    url('../fonts/LeagueSpartan-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Antonio';
+  src: url('../fonts/Antonio-Medium.eot');
+  src: url('../fonts/Antonio-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Antonio-Medium.woff2') format('woff2'),
+    url('../fonts/Antonio-Medium.woff') format('woff'),
+    url('../fonts/Antonio-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'League Spartan';
+  src: url('../fonts/LeagueSpartan-Regular.eot');
+  src: url('../fonts/LeagueSpartan-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/LeagueSpartan-Regular.woff2') format('woff2'),
+    url('../fonts/LeagueSpartan-Regular.woff') format('woff'),
+    url('../fonts/LeagueSpartan-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  color: $white;
+  font-family: 'League Spartan', sans-serif;
+  font-size: $font-size-default;
+  font-weight: normal;
+}
+
+h1 {
+  font-family: 'Antonio', sans-serif;
+  font-size: $font-size-large;
+  font-weight: 500;
+  line-height: 10.3rem;
+}
+
+.title {
+  font-size: 2.8rem;
+  letter-spacing: -1.05px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Antonio', sans-serif;
+  font-size: $font-size-medium;
+  font-weight: 500;
+  letter-spacing: -0.15rem;
+  line-height: 5.2rem;
+}
+
+h3 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: $font-size-small;
+  font-weight: bold;
+  letter-spacing: 0.26rem;
+  line-height: 2.5rem;
+}
+
+h4 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: $font-size-xsmall;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  line-height: 2.5rem;
+}
+
+.btn {
+  text-transform: uppercase;
+
+  &--nav {
+    font-size: $font-size-xsmall;
+  }
+}

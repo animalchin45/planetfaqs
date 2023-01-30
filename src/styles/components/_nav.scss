@@ -1,0 +1,20 @@
+nav {
+  border-bottom: 1px solid $light-gray;
+  display: grid;
+  grid-template-columns: 10.9rem 1fr 66.5rem;
+  height: 100%;
+  padding: 2.2rem 4rem 2.7rem 3.2rem;
+  width: 100%;
+
+  h1 {
+    grid-column: 1 / 2;
+  }
+
+  ul {
+    display: flex;
+    grid-column: 3 / 4;
+    height: calc(100% + 4.9rem);
+    justify-content: space-between;
+    transform: translateY(-2.2rem);
+  }
+}

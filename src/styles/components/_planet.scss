@@ -1,0 +1,19 @@
+.planet {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &__view {
+    align-items: center;
+    display: grid;
+    grid-template-rows: 75.4rem 12.8rem;
+    width: 111rem;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 25.5rem);
+    height: 12.8rem;
+    width: 100%;
+  }
+}

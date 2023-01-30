@@ -1,0 +1,7 @@
+.container {
+  background-color: $dark-blue;
+  display: grid;
+  grid-template-rows: 8.6rem 1fr;
+  min-height: 100vh;
+  max-width: 100vw;
+}

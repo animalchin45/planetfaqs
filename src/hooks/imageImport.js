@@ -7,5 +7,5 @@ function importAll(r) {
 }
 
 export const images = importAll(
-  require.context('../assets', true, /\.(png|jpe?g|svg)$/)
+  require.context('../img', true, /\.(png|jpe?g|svg)$/)
 )

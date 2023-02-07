@@ -7,7 +7,7 @@ import PlanetStats from './PlanetStats'
 
 export default function Planet() {
   const { name, overview, rotation, revolution, radius, temperature, images } =
-    data[4]
+    data[0]
 
   return (
     <section className='planet'>

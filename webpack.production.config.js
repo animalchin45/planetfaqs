@@ -66,7 +66,7 @@ module.exports = {
       title: 'The Planet Facts',
       template: 'src/index.hbs',
       description: 'The Planets - A place for planet information',
-      favicon: './src/img/favicon-32x32.png',
+      favicon: './src/assets/favicon-32x32.png',
     }),
     new Dotenv(),
   ],

@@ -1,32 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 
-export default function useDynamicSVGImport(name, options = {}) {
+export default function useDynamicSVGImport(name) {
   const ImportedIconRef = useRef()
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState()
+  ImportedIconRef.current = name
 
-  const { onCompleted, onError } = options
-  useEffect(() => {
-    setLoading(true)
-    const importIcon = async () => {
-      try {
-        ImportedIconRef.current = (await import(`${name}`)).ReactComponent
-        // const { default: namedImport } = await import(`../assets/icons/${name}.svg`);
-        // ImportedIconRef.current = namedImport;
-        if (onCompleted) {
-          onCompleted(name, ImportedIconRef.current)
-        }
-      } catch (err) {
-        if (onError) {
-          onError(err)
-        }
-        setError(err)
-      } finally {
-        setLoading(false)
-      }
-    }
-    importIcon()
-  }, [name, onCompleted, onError])
-
-  return { error, loading, SvgIcon: ImportedIconRef.current }
+  return { SvgIcon: ImportedIconRef.current }
 }

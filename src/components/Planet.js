@@ -5,21 +5,43 @@ import PlanetView from './PlanetView'
 import PlanetTopics from './PlanetTopics'
 import PlanetStats from './PlanetStats'
 
-export default function Planet() {
-  const { name, overview, rotation, revolution, radius, temperature, images } =
-    data[0]
+export default function Planet({ selectedPlanet, topic, setTopic }) {
+  const {
+    name,
+    overview,
+    structure,
+    geology,
+    rotation,
+    revolution,
+    radius,
+    temperature,
+    images,
+  } = data[selectedPlanet]
 
   return (
     <section className='planet'>
       <div className='planet__main'>
-        <PlanetView img={images} />
+        <PlanetView img={images} topic={topic} />
         <div className='planet__overview'>
           <h1>{name}</h1>
-          <p>{overview.content}</p>
           <p>
-            Source: <a href={overview.source}>Wikipedia</a>
+            {(topic === 'planet' && overview.content) ||
+              (topic === 'internal' && structure.content) ||
+              (topic === 'geology' && geology.content)}
           </p>
-          <PlanetTopics />
+          <p>
+            Source:{' '}
+            <a
+              href={
+                (topic === 'planet' && overview.source) ||
+                (topic === 'internal' && structure.source) ||
+                (topic === 'geology' && geology.source)
+              }
+            >
+              Wikipedia
+            </a>
+          </p>
+          <PlanetTopics setTopic={setTopic} />
         </div>
       </div>
       <PlanetStats

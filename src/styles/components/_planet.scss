@@ -7,13 +7,35 @@
   &__main {
     display: grid;
     grid-column: 2 / 3;
-    grid-template-columns: 76rem 1fr;
+    grid-template-columns: 67.3rem 1fr;
+    margin-bottom: 8.7rem;
   }
 
   &__view {
     align-items: center;
-    display: flex;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: 100%;
     justify-content: center;
+    width: 100%;
+
+    &--planet {
+      grid-column: 1 / 2;
+      grid-row: 1 / -1;
+    }
+
+    &--geology {
+      align-items: flex-end;
+      display: flex;
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      justify-content: center;
+
+      & img {
+        height: 19.9rem;
+        width: 16.3rem;
+      }
+    }
   }
 
   &__overview {

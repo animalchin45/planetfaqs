@@ -26,4 +26,13 @@ $tablet-break: 1100px;
 $mobile-break: 800px;
 
 // Animation Timing
-$fade: 0.2s;
+$fade: 0.4s;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

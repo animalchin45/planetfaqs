@@ -9,11 +9,13 @@ import Background from './assets/background-stars.svg'
 
 function App() {
   const [selectedPlanet, setSelectedPlanet] = useState(2)
+  const [planetColor, setPlanetColor] = useState('#6d2ed5')
   const [topic, setTopic] = useState('planet')
   const svgString = encodeURIComponent(renderToStaticMarkup(<Background />))
 
-  const onPlanetSelect = (planet) => {
+  const onPlanetSelect = (planet, color) => {
     setSelectedPlanet(planet)
+    setPlanetColor(color)
     setTopic('planet')
   }
 
@@ -25,6 +27,7 @@ function App() {
       <Nav onPlanetSelect={onPlanetSelect} />
       <Planet
         selectedPlanet={selectedPlanet}
+        planetColor={planetColor}
         topic={topic}
         setTopic={setTopic}
       />

@@ -20,16 +20,19 @@
     width: 100%;
 
     &--planet {
+      animation: fadeIn $fade;
       grid-column: 1 / 2;
       grid-row: 1 / -1;
     }
 
     &--geology {
       align-items: flex-end;
+      animation: fadeIn $fade;
       display: flex;
       grid-column: 1 / 2;
       grid-row: 2 / 3;
       justify-content: center;
+      z-index: 3;
 
       & img {
         height: 19.9rem;
@@ -71,6 +74,10 @@
       & p {
         color: $light-gray;
         margin-bottom: 1.2rem;
+      }
+
+      & h2 {
+        animation: fadeIn 3s;
       }
     }
   }

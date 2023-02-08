@@ -5,7 +5,12 @@ import PlanetView from './PlanetView'
 import PlanetTopics from './PlanetTopics'
 import PlanetStats from './PlanetStats'
 
-export default function Planet({ selectedPlanet, topic, setTopic }) {
+export default function Planet({
+  selectedPlanet,
+  planetColor,
+  topic,
+  setTopic,
+}) {
   const {
     name,
     overview,
@@ -41,7 +46,11 @@ export default function Planet({ selectedPlanet, topic, setTopic }) {
               Wikipedia
             </a>
           </p>
-          <PlanetTopics setTopic={setTopic} />
+          <PlanetTopics
+            planetColor={planetColor}
+            topic={topic}
+            setTopic={setTopic}
+          />
         </div>
       </div>
       <PlanetStats

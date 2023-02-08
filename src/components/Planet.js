@@ -2,6 +2,7 @@ import React from 'react'
 
 import data from '../../data.json'
 import PlanetView from './PlanetView'
+import PlanetContent from './PlanetContent'
 import PlanetTopics from './PlanetTopics'
 import PlanetStats from './PlanetStats'
 
@@ -11,41 +12,15 @@ export default function Planet({
   topic,
   setTopic,
 }) {
-  const {
-    name,
-    overview,
-    structure,
-    geology,
-    rotation,
-    revolution,
-    radius,
-    temperature,
-    images,
-  } = data[selectedPlanet]
+  const { rotation, revolution, radius, temperature, images } =
+    data[selectedPlanet]
 
   return (
     <section className='planet'>
       <div className='planet__main'>
         <PlanetView img={images} topic={topic} />
         <div className='planet__overview'>
-          <h1>{name}</h1>
-          <p>
-            {(topic === 'planet' && overview.content) ||
-              (topic === 'internal' && structure.content) ||
-              (topic === 'geology' && geology.content)}
-          </p>
-          <p>
-            Source:{' '}
-            <a
-              href={
-                (topic === 'planet' && overview.source) ||
-                (topic === 'internal' && structure.source) ||
-                (topic === 'geology' && geology.source)
-              }
-            >
-              Wikipedia
-            </a>
-          </p>
+          <PlanetContent selectedPlanet={selectedPlanet} topic={topic} />
           <PlanetTopics
             planetColor={planetColor}
             topic={topic}

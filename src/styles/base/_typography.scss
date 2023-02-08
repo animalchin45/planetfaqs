@@ -109,3 +109,11 @@ h4 {
     }
   }
 }
+
+@media (max-width: $tablet-break) {
+  .planet__stats {
+    h2 {
+      font-size: 2.4rem;
+    }
+  }
+}

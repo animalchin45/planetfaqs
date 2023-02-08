@@ -18,3 +18,24 @@ nav {
     transform: translateY(-2.2rem);
   }
 }
+
+@media (max-width: $tablet-break) {
+  nav {
+    grid-template-columns: auto;
+    grid-template-rows: 7.5rem 2.5rem;
+    padding: 3.2rem 5.2rem 2.7rem 5.2rem;
+
+    h1 {
+      grid-column: 1 / 2;
+      text-align: center;
+      // width: 100%;
+    }
+
+    ul {
+      grid-column: 1 / 2;
+      height: 2.5rem;
+      transform: translateY(0);
+      // width: 100%;
+    }
+  }
+}

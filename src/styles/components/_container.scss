@@ -11,3 +11,9 @@
     grid-template-rows: 15.9rem 1fr;
   }
 }
+
+@media (max-width: $mobile-break) {
+  .container {
+    grid-template-rows: 6.8rem 1fr;
+  }
+}

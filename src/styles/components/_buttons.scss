@@ -34,3 +34,38 @@
     color: $white;
   }
 }
+
+@media (max-width: $mobile-break) {
+  .btn {
+    border: none;
+
+    &--nav {
+      align-items: center;
+      border: none;
+      display: grid;
+      grid-template-columns: repeat(2, 2rem) 1fr 17.9rem;
+      padding: 2rem 0;
+      width: 100%;
+
+      &__dot {
+        border: none;
+        border-radius: 20rem;
+        height: 2rem;
+        width: 2rem;
+      }
+
+      h4 {
+        grid-column: 3 / 4;
+        text-align: start;
+      }
+
+      svg {
+        margin-left: auto;
+      }
+
+      &:hover {
+        border-top: none;
+      }
+    }
+  }
+}

@@ -2,6 +2,8 @@ import React from 'react'
 
 import data from '../../data.json'
 
+import Source from '../assets/icon-source.svg'
+
 export default function PlanetContent({ selectedPlanet, topic }) {
   const { name, overview, structure, geology, images } = data[selectedPlanet]
 
@@ -23,7 +25,8 @@ export default function PlanetContent({ selectedPlanet, topic }) {
           }
         >
           Wikipedia
-        </a>
+        </a>{' '}
+        <Source />
       </p>
     </div>
   )

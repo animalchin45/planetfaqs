@@ -1,10 +1,13 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 import Svg from './Svg'
 
 import { images } from '../hooks/imageImport'
 
 export default function PlanetView({ img, topic }) {
+  const isMobile = useMediaQuery({ query: '(max-width: 760px)' })
+
   let imgPathPlanet
   let imgPathGeology
 
@@ -24,7 +27,13 @@ export default function PlanetView({ img, topic }) {
 
   return (
     <div className='planet__view'>
-      <Svg className='planet__view--planet' name={imgSrcPlanet.default} />
+      <Svg
+        className='planet__view--planet'
+        // height='100%'
+        // width='100%'
+        // viewBox='0 0 300 300'
+        name={imgSrcPlanet.default}
+      />
       <div className='planet__view--geology'>
         {topic === 'geology' && <img src={imgSrcGeology.default} />}
       </div>

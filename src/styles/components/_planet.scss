@@ -69,8 +69,11 @@
     flex-direction: column;
     justify-content: center;
 
-    & h1,
-    p {
+    & h1 {
+      margin-bottom: 1rem;
+    }
+
+    & p {
       margin-bottom: 2.4rem;
     }
   }
@@ -96,6 +99,7 @@
     &__view {
       &--planet {
         transform: scale(0.8);
+        // overflow: visible;
       }
 
       &--geology {
@@ -145,10 +149,10 @@
 
     &__topics {
       border-bottom: 1px solid $light-gray;
-      grid-column: 1 / -1;
+      display: flex;
       grid-template-rows: none;
       height: 100%;
-      // transform: translateY(3.9rem);
+      justify-content: space-around;
     }
 
     &__main {
@@ -161,6 +165,7 @@
     &__view {
       &--planet {
         transform: scale(0.45);
+        // overflow: visible;
       }
       &--geology {
         transform: scale(0.45);
@@ -193,10 +198,14 @@
     }
 
     &__overview {
-      // display: grid;
-      // grid-template-columns: 33.9rem 1fr 28.1rem;
       padding: 0 2.4rem;
       width: 100%;
+
+      &--container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }

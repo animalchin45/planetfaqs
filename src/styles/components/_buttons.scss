@@ -67,5 +67,20 @@
         border-top: none;
       }
     }
+
+    &--topics {
+      border: none;
+      display: flex;
+      padding: 1.2rem 1rem 1.2rem 2.8rem;
+      transition: background-color $fade;
+
+      & h3:first-of-type {
+        margin-right: 2.8rem;
+      }
+
+      &:hover {
+        background-color: $dark-gray;
+      }
+    }
   }
 }

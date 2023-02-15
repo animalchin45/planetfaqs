@@ -8,7 +8,7 @@ export default function PlanetContent({ selectedPlanet, topic }) {
   const { name, overview, structure, geology, images } = data[selectedPlanet]
 
   return (
-    <div>
+    <div className='planet__overview--container'>
       <h1>{name}</h1>
       <p>
         {(topic === 'planet' && overview.content) ||

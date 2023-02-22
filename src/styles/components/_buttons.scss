@@ -69,13 +69,16 @@
     }
 
     &--topics {
+      align-items: center;
       border: none;
       display: flex;
-      padding: 1.2rem 1rem 1.2rem 2.8rem;
+      justify-content: center;
+      padding: 0;
       transition: background-color $fade;
+      width: 8rem;
 
       & h3:first-of-type {
-        margin-right: 2.8rem;
+        margin-right: 0;
       }
 
       &:hover {

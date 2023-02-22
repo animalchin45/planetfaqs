@@ -29,9 +29,8 @@ export default function PlanetView({ img, topic }) {
     <div className='planet__view'>
       <Svg
         className='planet__view--planet'
-        // height='100%'
-        // width='100%'
-        // viewBox='0 0 300 300'
+        // viewBox='0 0 450 450'
+        // preserveAspectRatio='xMinYMin meet'
         name={imgSrcPlanet.default}
       />
       <div className='planet__view--geology'>

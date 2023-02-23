@@ -29,7 +29,7 @@ export default function NavMobile({ onPlanetSelect }) {
 
   const renderedNav = data.map((planet, index) => {
     return (
-      <li>
+      <li key={index}>
         <button
           className='btn btn--nav'
           onClick={() => handlePlanetSelect(index, planet.color)}

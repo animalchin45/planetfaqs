@@ -27,12 +27,12 @@ export default function PlanetView({ img, topic }) {
 
   return (
     <div className='planet__view'>
-      <Svg
+      {/* <Svg
         className='planet__view--planet'
-        // viewBox='0 0 450 450'
-        // preserveAspectRatio='xMinYMin meet'
+        viewBox='0 0 450 450'
+        preserveAspectRatio='xMinYMin meet'
         name={imgSrcPlanet.default}
-      />
+      /> */}
       <div className='planet__view--geology'>
         {topic === 'geology' && <img src={imgSrcGeology.default} />}
       </div>

@@ -56,6 +56,7 @@
       grid-column: 1 / 2;
       grid-row: 2 / 3;
       justify-content: center;
+      transform: translateY(5rem);
       z-index: 3;
 
       & img {
@@ -98,14 +99,8 @@
     }
 
     &__view {
-      &--planet {
-        // transform: scale(0.8);
-      }
-
       &--geology {
-        & img {
-          transform: scale(0.8);
-        }
+        transform: translateY(9rem);
       }
     }
 
@@ -163,11 +158,8 @@
     }
 
     &__view {
-      &--planet {
-        // transform: scale(0.45);
-      }
       &--geology {
-        transform: scale(0.45);
+        transform: scale(0.6) translateY(5rem);
       }
     }
 

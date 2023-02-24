@@ -15,7 +15,7 @@ export default function Planet({
   setTopic,
 }) {
   const isMobile = useMediaQuery({ query: '(max-width: 760px)' })
-  const { rotation, revolution, radius, temperature, images } =
+  const { rotation, revolution, radius, temperature, images, svgsize } =
     data[selectedPlanet]
 
   return (
@@ -28,7 +28,7 @@ export default function Planet({
             setTopic={setTopic}
           />
         )}
-        <PlanetView img={images} topic={topic} />
+        <PlanetView img={images} topic={topic} svgsize={svgsize} />
         <div className='planet__overview'>
           <PlanetContent selectedPlanet={selectedPlanet} topic={topic} />
           {!isMobile && (

@@ -5,7 +5,7 @@ import data from '../../data.json'
 export default function Nav({ onPlanetSelect }) {
   const renderedNav = data.map((planet, index) => {
     return (
-      <li>
+      <li key={index}>
         <button
           className='btn btn--nav'
           onClick={() => onPlanetSelect(index, planet.color)}

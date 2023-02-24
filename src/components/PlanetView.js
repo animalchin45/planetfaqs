@@ -1,25 +1,19 @@
 import React from 'react'
-import { useMediaQuery } from 'react-responsive'
 
 import Svg from './Svg'
 
 import { images } from '../hooks/imageImport'
 
-export default function PlanetView({ img, topic }) {
-  const isMobile = useMediaQuery({ query: '(max-width: 760px)' })
-
+export default function PlanetView({ img, topic, svgsize }) {
   let imgPathPlanet
-  let imgPathGeology
+  let imgPathGeology = img.geology
 
   if (topic === 'planet') {
     imgPathPlanet = img.planet
-    imgPathGeology = img.geology
   } else if (topic === 'internal') {
     imgPathPlanet = img.internal
-    imgPathGeology = img.geology
   } else if (topic === 'geology') {
     imgPathPlanet = img.planet
-    imgPathGeology = img.geology
   }
 
   const imgSrcPlanet = images[imgPathPlanet.replace('./assets/', '')]
@@ -27,12 +21,14 @@ export default function PlanetView({ img, topic }) {
 
   return (
     <div className='planet__view'>
-      {/* <Svg
+      <Svg
         className='planet__view--planet'
-        viewBox='0 0 450 450'
+        height='100%'
+        width='100%'
+        viewBox={svgsize}
         preserveAspectRatio='xMinYMin meet'
         name={imgSrcPlanet.default}
-      /> */}
+      />
       <div className='planet__view--geology'>
         {topic === 'geology' && <img src={imgSrcGeology.default} />}
       </div>

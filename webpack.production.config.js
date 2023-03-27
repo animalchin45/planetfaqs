@@ -63,9 +63,9 @@ module.exports = {
       cleanOnceBeforeBuildPatterns: ['**/*'],
     }),
     new HtmlWebpackPlugin({
-      title: 'The Planet Facts',
+      title: 'Planet Facts',
       template: 'src/index.hbs',
-      description: 'The Planets - A place for planet information',
+      description: 'Planet Facts - A place for planet information',
       favicon: './src/assets/favicon-32x32.png',
     }),
     new Dotenv(),
